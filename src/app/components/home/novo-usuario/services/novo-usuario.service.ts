@@ -1,25 +1,25 @@
+import { environment } from './../../../../../environments/environment.prod';
 import { NovoUsuario } from '../models/novo-usuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+const API = environment.apiURL;
 @Injectable({
   providedIn: 'root'
 })
 export class NovoUsuarioService {
-
-  private readonly url = 'http://localhost:3000/user';
 
   constructor(
     private http: HttpClient,
   ) { }
 
   cadastraNovousuario(novoUsuario: NovoUsuario) {
-    const urlSignup = `${this.url}/signup`;
+    const urlSignup = `${API}/user/signup`;
     return this.http.post(urlSignup, novoUsuario);
   }
 
   verificarUsuarioExistente(nomeUsuario: string) {
-    const urlUserExists = `${this.url}/exists/${nomeUsuario}`
+    const urlUserExists = `${API}/user/exists/${nomeUsuario}`
     return this.http.get(urlUserExists);
   }
 }
