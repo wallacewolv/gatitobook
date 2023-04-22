@@ -1,4 +1,4 @@
-import { MensagemModule } from './../componentes/mensagem/mensagem.module';
+import { MensagemModule } from '../shared/mensagem/mensagem.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
