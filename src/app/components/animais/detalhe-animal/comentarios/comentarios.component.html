@@ -14,12 +14,12 @@
   </ul>
 
   <div class="mt-4">
-    <form [formGroup]="comentarioForm" (submit)="gravar()">
+    <form [formGroup]="comentarioform" (submit)="gravar()">
       <div class="input-group">
         <textarea class="form-control" formControlName="comentario"></textarea>
         <div class="input-group-append">
           <button
-            [disabled]="comentarioForm.invalid"
+            [disabled]="comentarioform.invalid"
             class="btn btn-primary pull-left"
           >
             Publicar
@@ -27,7 +27,7 @@
         </div>
       </div>
       <app-mensagem
-        *ngIf="!!comentarioform.get('comentario')?.errors?.maxlength"
+        *ngIf="!!comentarioform.get('comentario')?.errors?.['maxLength']"
         mensagem="Tamanho máximo de 300 caracteres"
       ></app-mensagem>
     </form>
