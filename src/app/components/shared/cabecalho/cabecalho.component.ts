@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { UsuarioService } from '../../autenticacao/usuario/usuario.service';
+import { UsuarioService } from '../../autenticacao/services/usuario/usuario.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,7 +15,6 @@ export class CabecalhoComponent {
     private usuarioService: UsuarioService,
     private router: Router,
   ) { }
-
 
   logout() {
     this.usuarioService.logout();

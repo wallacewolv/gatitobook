@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AutenticacaoModule } from './components/autenticacao/autenticacao.module';
+import { AutenticacaoModule } from './components/autenticacao/services/autenticacao.module';
 import { CabecalhoModule } from './components/shared/cabecalho/cabecalho.module';
 import { RodapeModule } from './components/shared/rodape/rodape.module';
 

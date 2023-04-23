@@ -1,4 +1,4 @@
-import { AutenticacaoInterceptor } from './interceptors/autenticacao.interceptor';
+import { AutenticacaoInterceptor } from '../interceptors/autenticacao.interceptor';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
