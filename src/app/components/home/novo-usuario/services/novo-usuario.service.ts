@@ -14,12 +14,10 @@ export class NovoUsuarioService {
   ) { }
 
   cadastraNovousuario(novoUsuario: NovoUsuario) {
-    const urlSignup = `${API}/user/signup`;
-    return this.http.post(urlSignup, novoUsuario);
+    return this.http.post(`${API}/user/signup`, novoUsuario);
   }
 
   verificarUsuarioExistente(nomeUsuario: string) {
-    const urlUserExists = `${API}/user/exists/${nomeUsuario}`
-    return this.http.get(urlUserExists);
+    return this.http.get(`${API}/user/exists/${nomeUsuario}`);
   }
 }
