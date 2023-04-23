@@ -37,6 +37,7 @@ export class ComentariosComponent implements OnInit {
   }
 
   gravar() {
+    debugger
     const comentario = this.comentarioform.get('comentario')?.value ?? '';
     this.comentarios$ = this.comentariosService.incluiComentario(
       this.id, comentario)
