@@ -5,8 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AutenticacaoModule } from './components/autenticacao/services/autenticacao.module';
-import { CabecalhoModule } from './components/shared/cabecalho/cabecalho.module';
-import { RodapeModule } from './components/shared/rodape/rodape.module';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +15,8 @@ import { RodapeModule } from './components/shared/rodape/rodape.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CabecalhoModule,
-    RodapeModule,
-    AutenticacaoModule
+    AutenticacaoModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
